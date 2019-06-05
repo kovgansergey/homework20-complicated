@@ -12,14 +12,26 @@
 			+bold
 			font-size: 41px
 			line-height: 55px
+			animation-duration: 0.5s
+			animation-timing-function: linear
 		&__subtitle
 			margin: 0
 			+bold
 			font-size: 20px
+			opacity: 0
+			animation-duration: 0.5s
+			animation-timing-function: linear
+			animation-delay: 0.3s
+			animation-fill-mode: forwards
 	&-list
 		margin-top: 65px
 		padding: 0
 		list-style: none
+		opacity: 0
+		animation-duration: 0.5s
+		animation-timing-function: linear
+		animation-delay: 0.6s
+		animation-fill-mode: forwards
 		&__item
 			display: flex
 			align-items: center
@@ -43,6 +55,8 @@
 	&-img
 		max-width: 570px
 		width: 50%
+		opacity: 0
+		animation: slideLeft 0.5s linear 0.6s forwards
 		& img
 			width: 100%
 			box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05)

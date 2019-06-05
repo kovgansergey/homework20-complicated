@@ -14,6 +14,48 @@
   font-style: normal;
 }
 
+@keyframes slideRight {
+  from {
+    margin-left: -100px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    margin-right: -100px;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes rot {
+  from {
+    transform: rotate(60deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes emersion {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -21,6 +63,22 @@
 body {
   font-family: 'Museo Sans Light', sans-serif;
   color: #333333;
+}
+
+.anim-rot {
+  animation-name: rot;
+}
+
+.anim-slideright {
+  animation-name: slideRight;
+}
+
+.anim-slideleft {
+  animation-name: slideLeft;
+}
+
+.anim-emersion {
+  animation-name: emersion;
 }
 
 .container {
@@ -172,18 +230,30 @@ body {
   font-family: 'Museo Sans Bold', sans-serif;
   font-size: 41px;
   line-height: 55px;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
 }
 
 .header-description__subtitle {
   margin: 0;
   font-family: 'Museo Sans Bold', sans-serif;
   font-size: 20px;
+  opacity: 0;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
 }
 
 .header-list {
   margin-top: 65px;
   padding: 0;
   list-style: none;
+  opacity: 0;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
 }
 
 .header-list__item {
@@ -217,6 +287,8 @@ body {
 .header-img {
   max-width: 570px;
   width: 50%;
+  opacity: 0;
+  animation: slideLeft 0.5s linear 0.6s forwards;
 }
 
 .header-img img {
@@ -401,6 +473,10 @@ body {
 
 .slider__img {
   margin: auto;
+  opacity: 0;
+  animation-duration: 0.6s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 .slider__arrows {
@@ -451,6 +527,10 @@ body {
   padding-bottom: 43px;
   text-align: center;
   border: 1px solid #e8e8e8;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 .price-card:hover {
